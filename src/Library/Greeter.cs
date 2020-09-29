@@ -1,17 +1,12 @@
 ﻿using System;
 
-namespace Library
+namespace Program
 {
-    public class Greeter
+    public class Greeter : ISingleton<Greeter>
     {
-        private Greeter()
-        {
-            // Intentionally left blank
-        }
-
         private static Greeter instance;
 
-        public static Greeter Instance
+        static Greeter Instance
         {
             get
             {

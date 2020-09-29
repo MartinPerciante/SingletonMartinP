@@ -1,12 +1,10 @@
-﻿using Library;
-
-namespace Program
+﻿namespace Program
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Greeter.Instance.SayHiToTheWorld();
+            ISingleton<Greeter>.Instance.SayHiToTheWorld();
         }
     }
 }
