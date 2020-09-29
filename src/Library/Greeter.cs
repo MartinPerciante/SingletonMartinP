@@ -2,7 +2,7 @@
 
 namespace Program
 {
-    public class Greeter : ISingleton<Greeter>
+    public class Greeter
     {
         public void SayHiToTheWorld()
         {
