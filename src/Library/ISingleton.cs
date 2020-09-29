@@ -2,9 +2,21 @@ using System;
 
 namespace Program
 {
-    public interface ISingleton<T> where T : new()
+    public class ISingleton<T> where T : new()
     {
-        void SayHiToTheWorld();
-        static ISingleton<T> Instance;
+        private static T instance;
+
+        public static T Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new T();
+                }
+
+                return instance;
+            }
+        }
     }
 }
